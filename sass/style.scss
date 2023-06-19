@@ -1,0 +1,92 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #2f3640;
+}
+
+.title{
+  color: white;
+  font-size:30px;
+  position: absolute;
+  top:50px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.slider {
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+  border-radius: 15px;
+  border: 8px solid rgba(127, 143, 166, 0.4);
+  img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 5px;
+    &.active {
+      display: block;
+    }
+  }
+  .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+      background: rgba(220, 221, 225, 0.5);
+      transition: all 0.2s ease;
+      &.active {
+        background: white;
+        height: 5px;
+        width: 20px;
+        border-radius: 5px;
+      }
+      &.dot_2,
+      &.dot_3,
+      &.dot_4 {
+        margin-left: 10px;
+      }
+    }
+  }
+  .prev {
+    position: absolute;
+    left: 15px;
+    top: 45%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      left: 20px;
+    }
+  }
+  .next {
+    position: absolute;
+    right: 15px;
+    top: 45%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      right: 20px;
+    }
+  }
+}
